@@ -1,0 +1,8 @@
+<mat-card *ngIf="mission">
+    <img mat-card-image [src]="mission.links.mission_patch_small" />
+    <mat-card-title>{{ mission.mission_name }}</mat-card-title>
+    <mat-card-subtitle>{{ mission.launch_year }}</mat-card-subtitle>
+    <p>{{ mission.details }}</p>
+    <a *ngIf="mission.links.article_link" [href]="mission.links.article_link" target="_blank">Article</a>
+  </mat-card>
+  

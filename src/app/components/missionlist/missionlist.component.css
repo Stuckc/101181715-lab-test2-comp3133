@@ -1,0 +1,22 @@
+.mission-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 16px;
+  }
+  
+  .mission-container mat-card {
+    width: 300px;
+    background: #b2dfee;
+    cursor: pointer;
+  }
+  
+  .mission-container mat-card img {
+    height: 150px;
+    object-fit: contain;
+  }
+  
+  .mission-container mat-card p {
+    font-size: 14px;
+  }
+  
