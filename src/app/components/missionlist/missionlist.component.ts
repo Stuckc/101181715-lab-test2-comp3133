@@ -18,8 +18,14 @@ export class MissionlistComponent implements OnInit {
   constructor(private spacex: SpacexService, private router: Router) {}
 
   ngOnInit(): void {
-    this.spacex.getAllMissions().subscribe(data => {
-      this.missions = data;
+    this.spacex.getAllMissions().subscribe({
+      next: (data) => {
+        console.log('🚀 Missions fetched:', data);
+        this.missions = data;
+      },
+      error: (err) => {
+        console.error('❌ Error fetching missions:', err);
+      }
     });
   }
 
