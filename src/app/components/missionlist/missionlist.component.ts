@@ -9,9 +9,11 @@ import { Mission } from '../../models/mission';
   selector: 'app-missionlist',
   standalone: true,
   imports: [CommonModule, MatCardModule],
+  providers: [SpacexService], 
   templateUrl: './missionlist.component.html',
   styleUrls: ['./missionlist.component.css']
 })
+
 export class MissionlistComponent implements OnInit {
   missions: Mission[] = [];
 
